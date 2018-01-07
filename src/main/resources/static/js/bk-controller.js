@@ -53,7 +53,7 @@ bkApp.controller('BkController',
 bkApp.controller('FormController', 
     function($scope, $http, $window){
         $scope.simpan = function() {
-            $http.post('/tambah-bk', $scope.bk).then(sukses, gagal);
+            $http.post('/tambah-buku', $scope.bk).then(sukses, gagal);
 
             function sukses(response){
                 $window.location.href = '/';
