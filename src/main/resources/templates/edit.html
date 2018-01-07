@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+	<title>Edit Data</title>
+	<script src="/js/angular.min.js"></script>
+	<script src="/js/pnls-controller.js"></script>
+	<script src="/js/edit-controller.js"></script>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+</head>
+<body ng-app="PnlsApp" ng-controller="EditController" class="container">
+	<div class="jumbotron">
+		<h1>Form Edit Data</h1>
+	</div>
+
+	<form>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Id</label>
+			<input class="form-control" type="text" placeholder="Masukkan ID..." ng-model="bk.id" readonly="true" />
+			
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Judul Buku</label>
+			<input class="form-control" type="text" placeholder="Masukkan nama penulis..." ng-model="bk.judul_buku" />
+			
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-label">Penulis</label>
+			<input class="form-control" type="text" placeholder="Masukkan judul buku..." ng-model="bk.penulis" />
+			
+		</div>
+		<div class="form-group row">
+			<button class="btn btn-primary" ng-click="simpan()">Simpan</button>
+			<button class="btn btn-warning" ng-click="batal()">Batal</button>
+		</div>
+	</form>
+
+</body>
+</html>

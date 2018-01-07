@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Daftar Buku</title>
+	<script src="/js/angular.min.js"></script>
+	<script src="/js/bk-controller.js"></script>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.css" />
+    
+    </head>
+    <body ng-app="BkApp" class="container">
+        
+        <div class="jumbotron">
+            <h1>Daftar Buku</h1>
+            
+        </div>
+        <div class="well" ng-controller="BkController">
+        <div class="row">
+        <div class="col-md-6 text-left">
+            <a href="/tambah" class="btn btn-primary" role="button">Tambah Data</a>
+        </div>
+        <div class="col-md-6 text-right">
+        <button class="btn btn-danger2" ng-click="keluar()">Keluar</button>
+        </div>
+        </div><br/> <br/>
+            <table class="table table-bordered table-striped table-hovered">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>JUDUL BUKU</th>
+                        <th>PENULIS</th>
+                        <th width="200px">OPSI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="bk in daftarBk">
+                        <td>{{ bk.id }}</td>
+                        <td>{{ bk.judul_buku }}</td>
+                        <td>{{ bk.penulis }}</td>
+                        <td>
+                        <button class="btn btn-warning" ng-click="ubah(bk)">Ubah</button>
+                        <button class="btn btn-danger" ng-click="hapus(bk)">Hapus</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="/bootstrap/js/jquery-1.11.3.min.js"></script>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

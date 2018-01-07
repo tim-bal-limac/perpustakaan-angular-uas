@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+	<title>Belajar Angular JS</title>
+	<script src="/js/angular.min.js"></script>
+	<script src="/js/coba-controller.js"></script>
+	<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+</head>
+<body ng-app="CobaApp" ng-controller="CobaController">
+<div class="container">
+	<div class="jumbotron">
+	<h1>Halaman Percobaan</h1>
+	</div>
+	<br/>
+	Nama : <input type="text" ng-model="nama" />
+	<br />
+	<h3>Selamat Datang {{ nama }}</h3>
+	<button class="btn btn-primary" ng-click="tambah()">Tambah</button>
+	<br />
+	<ul>
+		<li ng-repeat="nm in daftarNama">{{ nm }}</li>
+	</ul>
+
+	<br/>
+	<br/>
+
+	<button class="btn btn-warning" ng-click="ambilData()">Proses</button>
+	<br/>
+	Kamu login sebagai {{ user }}
+
+
+
+</div>
+	
+
+</body>
+</html>
